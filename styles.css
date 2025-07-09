@@ -336,9 +336,9 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 480px;
-  padding: 12px 0px;
+  padding: 12px 10px;
   background: #fff;
 }
 
@@ -350,7 +350,7 @@ body {
 
 .contact-link {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   color: #333;
   text-decoration: none;
   word-break: break-all;
@@ -627,7 +627,7 @@ body {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .contact-link {
   font-size: 1.05rem;
@@ -637,10 +637,6 @@ body {
 } 
 
 @media (max-width: 600px) {
-  .contact-list-vertical {
-    gap: 20px;
-    margin-top: 18px;
-  }
   .contact-item-vertical {
     gap: 6px;
   }
@@ -652,7 +648,7 @@ body {
     font-size: 0.95rem;
   }
   .contact-numbers {
-    flex-direction: column;
-    gap: 2px;
+    flex-direction: row;
+    width: 100vw;
   }
 } 
