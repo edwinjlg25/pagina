@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. John Campos - Cirujano Traumatólogo Ortopedista</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animación de carga (NUEVA) -->
+  <div id="loading-animation" class="pantalla-de-carga-ultimo">
+    <img class="loading-logo" src="assets/logo_sin_fondo.png" alt="Logo" />
+    <div class="loading-text-container">
+      <span id="loading-animated-text">DR JOHN CAMPOS</span>
+      <span id="loading-animated-subtext">CIRUJANO TRAUMATOLOGO ORTOPEDISTA</span>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="main-content" class="main-content" style="display: none;">
+    <!-- Página de Inicio -->
+    <div id="home-page" class="page active">
+      <!-- Carrusel de cabecera -->
+      <div class="home-header-bg">
+        <button class="carousel-arrow left" id="carousel-prev" aria-label="Anterior">&lt;</button>
+        <img src="assets/carrusel/1.jpg" alt="Foto carrusel" class="home-header-img" id="carousel-img" />
+        <button class="carousel-arrow right" id="carousel-next" aria-label="Siguiente">&gt;</button>
+      </div>
+      <!-- Tarjeta Doctor (debajo del carrusel, ocupa todo el ancho) -->
+      <div class="home-doctor-card full-width">
+        <div class="home-doctor-info">
+          <div class="home-title">Dr. John Campos</div>
+          <div class="home-subtitle">Cirujano Traumatólogo Ortopedista, comprometido con la salud y bienestar de mis pacientes.</div>
+        </div>
+        <div class="home-header-logo no-bg">
+          <img src="assets/logo0.png" alt="Logo" />
+        </div>
+      </div>
+      <!-- Servicios -->
+      <div class="home-services-title">Servicios</div>
+      <div class="home-services-list">
+        <div class="service-item">
+          <img src="assets/image-90.png" alt="Ortopedia infantil" class="service-img" />
+          <div class="service-text"><b>Ortopedia infantil</b></div>
+        </div>
+        <div class="service-item">
+          <img src="assets/image-80.png" alt="Emergencias" class="service-img" />
+          <div class="service-text"><b>Emergencias</b></div>
+        </div>
+        <div class="service-item">
+          <img src="assets/image-70.png" alt="Traumatología" class="service-img" />
+          <div class="service-text"><b>Traumatología</b></div>
+        </div>
+      </div>
+      <div class="home-quote">“Te mereces la mejor atención, porque cada paso hacia tu recuperación importa.”</div>
+    </div>
+
+    <!-- Página de Contacto -->
+    <div id="contact-page" class="page">
+      <div class="section-header blue-bg">Contacto</div>
+      <div class="contact-list contact-list-vertical">
+        <div class="contact-item contact-item-vertical">
+          <img src="assets/whatsapp0.png" alt="WhatsApp" class="contact-icon contact-icon-large" />
+          <div class="contact-numbers" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px;">
+            <a href="tel:+584167276599" class="contact-link">+58 416-7276599</a>
+            <span style="margin: 0 6px; color: #888;">/</span>
+            <a href="tel:+584242752642" class="contact-link">+58 424-2752642</a>
+          </div>
+        </div>
+        <div class="contact-item contact-item-vertical">
+          <img src="assets/instagram0.png" alt="Instagram" class="contact-icon contact-icon-large" />
+          <a href="https://instagram.com/doctor.johncampos" target="_blank" class="contact-link">doctor.johncampos</a>
+        </div>
+        <div class="contact-item contact-item-vertical">
+          <img src="assets/correo-electronico0.png" alt="Email" class="contact-icon contact-icon-large" />
+          <a href="mailto:dr.johncampos@gmail.com" class="contact-link">dr.johncampos@gmail.com</a>
+        </div>
+        <div class="contact-item contact-item-vertical">
+          <img src="assets/sitio-web0.png" alt="Sitio web" class="contact-icon contact-icon-large" />
+          <a href="https://sites.google.com/view/doctor-john-campos" target="_blank" class="contact-link">sites.google.com/view/doctor-john-campos</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página Acerca de mi -->
+    <div id="about-page" class="page">
+      <div class="section-header blue-bg">Acerca de mi</div>
+      <div class="about-content">
+        <img src="assets/ellipse-60.png" alt="Foto Dr. John Campos" class="about-photo" />
+        <div class="about-title">Dr. John Campos</div>
+        <div class="about-subtitle">Cirujano Traumatologo Ortopedista</div>
+        <div class="about-text">
+          <b>¡Hola a Todos!</b><br>
+          Soy John Campos cirujano, egresado de la Universidad Nacional Experimental Francisco de Miranda y Especialista en Traumatología y Ortopedia del I.V.S.S "Hospital Dr. Domingo Luciani".<br><br>
+          Con amplia experiencia laboral, ejerciendo en reconocidos Centros Asistenciales a lo largo de mi carrera, como por ejemplo, C.C. Castillejo, Clínica A.B.G, Clínica Ozanam, Clínica Rojas Espinal, Instituto Popular Diagnóstico.<br><br>
+          Lo que me ha permitido adquirir experiencia profesional que ofrezco a su disposición para tratar cualquier patología relacionada a Traumatología y Ortopedia.<br><br>
+          <b>Dr. John Campos</b><br>
+          "El mejor aliado para mantenerte sano".
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra inferior global -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-page="home">
+      <img src="assets/inicio_open.png" alt="Inicio" class="nav-icon" />
+      <span class="nav-label">Inicio</span>
+    </button>
+    <button class="nav-item" data-page="contact">
+      <img src="assets/contacto.png" alt="Contacto" class="nav-icon" />
+      <span class="nav-label">Contacto</span>
+    </button>
+    <button class="nav-item" data-page="about">
+      <img src="assets/acerca.png" alt="Acerca de mi" class="nav-icon" />
+      <span class="nav-label">Acerca de mi</span>
+    </button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html> 
