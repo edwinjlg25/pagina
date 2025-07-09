@@ -562,9 +562,9 @@ body {
     max-width: 70vw;
   }
   #loading-animated-text {
-    font-size: 28px;
+    font-size: 23px;
   }
   #loading-animated-subtext {
-    font-size: 12px;
+    font-size: 10px;
   }
 } 
