@@ -530,7 +530,7 @@ body {
 }
 #loading-animated-subtext {
   color: #fff !important;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -562,9 +562,9 @@ body {
     max-width: 70vw;
   }
   #loading-animated-text {
-    font-size: 1.3rem;
+    font-size: 28px;
   }
   #loading-animated-subtext {
-    font-size: 0.7rem;
+    font-size: 12px;
   }
 } 
