@@ -26,7 +26,7 @@ body {
   display: none;
   min-height: 100vh;
   background: #f7fafd;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .page.active {
   display: block;
@@ -58,9 +58,8 @@ body {
 .splash-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   flex-direction: row;
-  gap: 24px;
 }
 .splash-logo {
   width: 64px;
@@ -73,9 +72,9 @@ body {
 }
 .splash-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: left;
 }
 .splash-title {
   color: #fff;
@@ -89,12 +88,6 @@ body {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 1px;
-}
-.mask-group {
-  max-width: 200px;
-  max-height: 200px;
-  width: auto;
-  height: auto;
 }
 
 /* ===== CARRUSEL ===== */
@@ -483,7 +476,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Alinea todo a la izquierda */
   background: linear-gradient(165.71deg, rgba(175, 210, 255, 1) 0%, rgba(0, 111, 255, 1) 52%, rgba(126, 179, 248, 1) 100%);
   z-index: 9999;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -491,89 +484,85 @@ body {
   box-sizing: border-box;
   padding: 32px 24px;
 }
+#loading-animated-text, #loading-animated-subtext {
+  text-align: left;
+  width: 100%;
+  color: #fff !important;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.18);
+}
+#loading-animated-text {
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+#loading-animated-subtext {
+  font-size: 0.7rem;
+  letter-spacing: 0.2px;
+}
 .pantalla-de-carga-ultimo .loading-logo {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   flex-shrink: 0;
   display: block;
+  margin-right: 24px; /* Espacio entre logo y texto */
+  margin-left: 0;
 }
 .loading-text-container {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: auto;
-  margin-left: 30px;
+  gap: 8px;
   min-width: 0;
 }
-#loading-animated-text, #loading-animated-subtext {
-  text-align: left;
-  width: 100%;
-}
-@media (max-width: 600px) {
-  .pantalla-de-carga-ultimo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-width: 0;
-    max-width: 100vw;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    padding: 24px 8px;
-  }
-  .pantalla-de-carga-ultimo .loading-logo {
-    width: 70px;
-    height: 70px;
-    margin-right: 0;
-    margin-bottom: 18px;
-  }
-  .loading-text-container {
-    margin-left: 0;
-    align-items: center;
-    width: 100%;
-  }
-  #loading-animated-text, #loading-animated-subtext {
-    text-align: center;
-    width: 100%;
-  }
-}
 #loading-animated-text {
-  font-size: 2.1rem;
+  color: #fff !important;
+  font-size: 28px;
   font-weight: 700;
-  color: #fff;
   letter-spacing: 2px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #fff;
   display: inline-block;
+  width: 0;
+  animation: typing 1s steps(30, end) forwards;
 }
 #loading-animated-subtext {
-  font-size: 1rem;
+  color: #fff !important;
+  font-size: 14px;
   font-weight: 400;
-  color: #e3e9f5;
   letter-spacing: 1px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #e3e9f5;
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 0;
+  width: 0;
+  animation: typing-sub 1s steps(30, end) 1.6s forwards;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes typing-sub {
+  from { width: 0; }
+  to { width: 100%; }
 }
 @media (max-width: 600px) {
+  .pantalla-de-carga-ultimo {
+    padding: 16px 4px;
+  }
   .pantalla-de-carga-ultimo .loading-logo {
-    width: 70px;
-    height: 70px;
-    left: 12px;
-    top: calc(50% - 40px);
+    width: 90px;
+    height: 90px;
+    margin-right: 14px;
   }
   .loading-text-container {
-    margin-left: 100px;
-    height: 60px;
+    max-width: 70vw;
   }
   #loading-animated-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   #loading-animated-subtext {
     font-size: 0.7rem;
